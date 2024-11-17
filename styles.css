@@ -61,14 +61,13 @@ main {
     max-width: 800px;
     margin: auto;
     padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 section {
-    margin: 60px 0; /* Adds vertical space between sections */
-    padding: 20px; /* Optional: Add some padding inside each section */
-    background: rgba(255, 255, 255, 0.9); /* Optional: Light background for sections */
-    border-radius: 10px; /* Optional: Rounded corners for sections */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+    margin: 40px 0;
 }
 
 h2 {
@@ -79,24 +78,19 @@ h2 {
 
 .gallery {
     display: flex;
-    flex-direction: column; /* Stack images vertically */
-}
-
-.gallery a {
-    display: block; /* Make the entire image clickable */
-    width: 100%; /* Full width */
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .gallery img {
-    width: 100%; /* Full width of the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 30%;
     border-radius: 10px;
-    margin-bottom: 20px; /* Space between images */
+    margin-bottom: 20px;
     transition: transform 0.3s;
 }
 
 .gallery img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05);
 }
 
 .contact-container {
@@ -153,4 +147,54 @@ form button {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    transition:
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #2575fc;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: white;
+    margin-top: 40px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+}
+
+.gallery a {
+    display: block; /* Make the entire image clickable */
+    width: 100%; /* Full width */
+}
+
+.gallery img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 20px; /* Space between images */
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+@media (max-width: 768px) {
+    .gallery img {
+        width: 100%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
