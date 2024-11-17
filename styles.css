@@ -162,6 +162,28 @@ footer {
     margin-top: 40px;
 }
 
+.gallery {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+}
+
+.gallery a {
+    display: block; /* Make the entire image clickable */
+    width: 100%; /* Full width */
+}
+
+.gallery img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 20px; /* Space between images */
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
 @media (max-width: 768px) {
     .gallery img {
         width: 100%;
